@@ -8,11 +8,17 @@ class Text extends Component {
         value: props.value
     }
   }
-
+  
+  onChange = (e) =>  {
+      this.setState({value: e.target.value}, function(){
+        this.props.onChange(this.state.value); 
+      }); 
+  }
+  
   render() {
     return (
-        <div className="output">
-            {this.props.value}
+        <div>
+            <input className="form-control" type="number" value={this.state.value} onChange={this.onChange} />
         </div>
     );
   }

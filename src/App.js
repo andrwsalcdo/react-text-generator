@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Output from './components/output'; 
 import Select from './components/Controls/select'; 
+import Text from './components/Controls/text';
 import axios from 'axios'; 
 
 class App extends Component {
@@ -33,6 +34,10 @@ class App extends Component {
     this.setState({html: x}, this.getSampleText); 
   }
 
+  changeParas = (number) => {
+    this.setState({paras: number}, this.getSampleText); 
+  }
+
   render() {
     return (
       <div className="App container">
@@ -42,6 +47,10 @@ class App extends Component {
             <div className="form-group">
               <label>Include HTML:</label>
               <Select value={this.state.html} onChange={this.showHtml} />
+            </div>
+            <div className="form-group">
+              <label>Include Paragraphs:</label>
+              <Text value={this.state.paras} onChange={this.changeParas} />
             </div>
           </form> 
           <br /><br />
