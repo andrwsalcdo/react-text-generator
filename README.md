@@ -1,0 +1,3 @@
+## React Text Generator App 
+
+more to follow...
