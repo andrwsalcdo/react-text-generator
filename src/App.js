@@ -41,16 +41,16 @@ class App extends Component {
   render() {
     return (
       <div className="App container">
-          <h1>React Js Sample Text Generator</h1>
+          <h1 className="text-center">React Js Sample Text Generator</h1>
           <hr />
           <form className="form-inline">
             <div className="form-group">
-              <label>Include HTML:</label>
-              <Select value={this.state.html} onChange={this.showHtml} />
+              <label>Include Paragraphs: </label>
+              <Text value={this.state.paras} onChange={this.changeParas} />
             </div>
             <div className="form-group">
-              <label>Include Paragraphs:</label>
-              <Text value={this.state.paras} onChange={this.changeParas} />
+              <label>Include HTML: </label>
+              <Select value={this.state.html} onChange={this.showHtml} />
             </div>
           </form> 
           <br /><br />

@@ -11,7 +11,7 @@ class Output extends Component {
 
   render() {
     return (
-        <div className="output">
+        <div className="output well">
             {this.props.value}
         </div>
     );
